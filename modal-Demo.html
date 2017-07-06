@@ -1,0 +1,26 @@
+<div id="app"></div>
+
+<!--template-->
+<script id="modal" type="text/regular" name="modal">
+    <div class="modal show">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        {title}
+                    </div>
+                    <button class="close" on-click={this.close()} data-dismiss="modal" aria-hidden="true"></button>
+                </div>
+                <div class="modal-body">
+                    {#include content}
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" on-click={this.close()}>关闭</button>
+                    <button class="btn btn-default" on-click={this.confirm()}>确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script src="javascript/modal-Demo.js"></script>
