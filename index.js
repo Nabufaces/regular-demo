@@ -1,7 +1,16 @@
 /**
  * Created by gaowenlin on 2017/7/5.
  */
-var Regular = require("regularjs");
+
+define(['.components/login.js'],function (Login) {
+        new Login({
+            data:{
+                title:"Welcome!"
+            }
+        }).$inject("#app");
+    }
+)
+/*var Regular = require("regularjs");
 
 var component = new Regular({
     template:"<button on-click={count = count + 1}>加{count}</button><p>{count}</p>",
@@ -16,7 +25,7 @@ var list = new Regular({
     data:{
         items:["a","b","c"]
     }
-}).$inject(document.body,"top");
+}).$inject(document.body,"top");*/
 
 /*
 var Component = Regular.extend({
